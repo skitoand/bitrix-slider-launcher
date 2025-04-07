@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Открытие сайта в слайдере</title>
+  <script>
+    window.onload = function () {
+      if (top.BX && top.BX.SidePanel) {
+        top.BX.SidePanel.Instance.open("https://project12783683.tilda.ws/", {
+          width: 1000
+        });
+        if (top.BX.SidePanel.Instance.close) {
+          top.BX.SidePanel.Instance.close(); // закрывает саму промежуточную вкладку
+        }
+      } else {
+        document.body.innerHTML = "<h2>Ошибка: откройте через Битрикс24</h2>";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Загрузка...</p>
+</body>
+</html>
